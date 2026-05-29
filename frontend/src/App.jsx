@@ -6,6 +6,8 @@ import RegisterPersonCentralBank from './components/registerPersonCentralBank'
 import SearchPersonByCBU from './components/searchPersonByCBU'
 import AsingAliasToPerson from './components/asingAliasToPerson'
 import SearchPersonByAlias from './components/searchPersonByAlias'
+import TransferToAnotherBank from './components/transferToAnotherBank'
+import CheckForTransfers from './components/checkForTransfers'
 import './App.css'
 
 
@@ -19,6 +21,8 @@ export default function App() {
       <SearchPersonByCBU></SearchPersonByCBU>
       <AsingAliasToPerson></AsingAliasToPerson>
       <SearchPersonByAlias></SearchPersonByAlias>
+      <TransferToAnotherBank></TransferToAnotherBank>
+      <CheckForTransfers></CheckForTransfers>
     </>
   )
 
