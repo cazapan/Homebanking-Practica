@@ -23,6 +23,7 @@ export default function App() {
       <SearchPersonByAlias></SearchPersonByAlias>
       <TransferToAnotherBank></TransferToAnotherBank>
       <CheckForTransfers></CheckForTransfers>
+      <h1>HOLA</h1>
     </>
   )
 
