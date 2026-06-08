@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axiosConfig from '../api/axiosConfig'
-const db = axiosConfig;
+const { db } = axiosConfig;
 
 function LoginPage() {
     const [dni, setDni] = useState('');
@@ -19,7 +19,7 @@ function LoginPage() {
 
     return (
         <div>
-            <h1>Iniciar Sesión</h1>
+            <h1>Iniciar Sesion</h1>
             <input
                 placeholder="DNI"
                 value={dni}
