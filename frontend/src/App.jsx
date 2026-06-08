@@ -1,31 +1,27 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
+import { useEffect } from 'react'
+import { ClerkProvider } from '@clerk/react'
+import LoginPage from './pages/loginPage'
+import RegisterPage from './pages/registerPage'
+import Dashboard from './pages/dashboard'
 import axios from "axios"
-import GetBanks from './components/getAllBanks'
-import ChangeBankName from './components/changeBankName'
-import RegisterPersonCentralBank from './components/registerPersonCentralBank'
-import SearchPersonByCBU from './components/searchPersonByCBU'
-import AsingAliasToPerson from './components/asingAliasToPerson'
-import SearchPersonByAlias from './components/searchPersonByAlias'
-import TransferToAnotherBank from './components/transferToAnotherBank'
-import CheckForTransfers from './components/checkForTransfers'
 import './App.css'
 
 
 export default function App() {
   
+  useEffect(() => {
+    console.log('El componente se renderizo');
+  });
+
   return (
-    <>
-      <GetBanks></GetBanks>
-      <ChangeBankName></ChangeBankName>
-      <RegisterPersonCentralBank></RegisterPersonCentralBank>
-      <SearchPersonByCBU></SearchPersonByCBU>
-      <AsingAliasToPerson></AsingAliasToPerson>
-      <SearchPersonByAlias></SearchPersonByAlias>
-      <TransferToAnotherBank></TransferToAnotherBank>
-      <CheckForTransfers></CheckForTransfers>
-      <h1>HOLA</h1>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<LoginPage/>} />
+        <Route path='register' element={<RegisterPage/>} />
+        <Route path='dashboard' element={<Dashboard/>} />
+      </Routes>
+    </BrowserRouter>
   )
-
-
 }

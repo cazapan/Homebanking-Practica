@@ -7,6 +7,7 @@ const buscarPersonaCBUForm = document.getElementById('buscarPersonaCBU');
 const buscarPersonaALIASForm = document.getElementById('buscarPersonaALIAS');
 const aniadirAliasForm = document.getElementById('aniadirAlias');
 
+
 // REGISTAR BANCOS EN LA API DEL PROFE
 registrarBancoForm.addEventListener('submit', async evento => {
     evento.preventDefault();
@@ -145,13 +146,13 @@ buscarPersonaALIASForm.addEventListener('submit', async evento => {
     console.log(resultado);
 });
 
-// /// SUBIR DATOS DEL FORM A BASE DE DATOS LOCAL
-// form.addEventListener('submit', async evento => {
+/// SUBIR DATOS DEL FORM A BASE DE DATOS LOCAL
+// registrarPersonaForm.addEventListener('submit', async evento => {
 //     evento.preventDefault();
-//     const formularioData = new FormData(form);
+//     const formularioData = new FormData(registrarPersonaForm);
 //     const data = Object.fromEntries(formularioData.entries());
 
-//     const respuesta = await fetch('http://localhost:3001/api/personas', {
+//     const respuesta = await fetch('http://localhost:3000/personas', {
 //         'method': 'POST',
 //         'headers': {
 //             'Content-Type': 'application/json'
