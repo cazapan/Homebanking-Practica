@@ -1,5 +1,5 @@
 const { json } = require('express');
-const pool = require('pg');
+const  pool = require('../db/conexion')
 
 const login = async (req, res) => {
     try {
@@ -15,5 +15,8 @@ const login = async (req, res) => {
         })
     } catch(error) {
         res.status(500).json({ error: 'Error interno del servidor'})
+        console.log('Error interno:', error)
     }
 }
+
+module.exports = { login }
